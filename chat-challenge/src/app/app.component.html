@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="text-center my-3">Sala de Chat</h1>
+
+  <app-chat-room [messages]="messages"></app-chat-room>
+  <div class="row mt-4">
+    <div class="col">
+      <app-message-user
+        [user]="'Pepe'"
+        [messageSent]="addMessage($event)"
+    ></app-message-user>
+    </div>
+
+    <div class="col">
+      <app-message-user
+        [user]="'Maria'"
+        [messageSent]="addMessage($event)"
+    ></app-message-user>
+    </div>
+  </div>
+</div>
