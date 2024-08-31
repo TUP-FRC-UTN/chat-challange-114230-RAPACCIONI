@@ -1,1 +1,15 @@
-<p>message-user works!</p>
+<form #messageForm="ngForm" (ngSubmit)="sendMessage()">
+    <div class="form-group">
+      <label>Usuario: {{ user }}</label>
+      <textarea 
+        [(ngModel)]="message" 
+        name="message" 
+        class="form-control" 
+        rows="3" 
+        placeholder="Mensaje" 
+        required>
+      </textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2" [disabled]="!messageForm.form.valid">Guardar</button>
+  </form>
+  
